@@ -49,8 +49,9 @@ COPY .    /var/www/html
 
 WORKDIR /var/www/html
 
-RUN mkdir -p var/cache/ var/logs/ var/sessions/ && \
-    chown -R www-data:www-data var/
+RUN mkdir -p var/cache/ var/logs/ var/sessions/ web/uploads/.tmb && \
+    chown -R www-data:www-data var/  web/uploads/ && \
+    chmod 777 -R var/  web/uploads/
 
 
 EXPOSE 80
