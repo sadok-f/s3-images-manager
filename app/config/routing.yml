@@ -1,6 +1,16 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+login:
+    path: /login
+    defaults:  { _controller: "AppBundle:Default:login" }
 
-elfinder:
-     resource: "@FMElfinderBundle/Resources/config/routing.yml"
+logout:
+   path: /logout
+
+#ElFinder routing
+ef_connect:
+    path:  /efconnect/{instance}/{homeFolder}
+    defaults: { _controller: FMElfinderBundle:ElFinder:load, instance: default, homeFolder: '' }
+
+homepage:
+    path: /{instance}/{homeFolder}
+    defaults: { _controller: FMElfinderBundle:ElFinder:show, instance: default, homeFolder: '' }
+

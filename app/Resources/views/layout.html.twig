@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}S3 Images Manager{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block stylesheets %}
+        {% stylesheets
+        '@AppBundle/Resources/public/css/bootstrap.min.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+<div class="container">
+    {% block header %}{% endblock %}
+    {% block body %}{% endblock %}
+</div>
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>
+s
