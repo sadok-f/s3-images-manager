@@ -28,7 +28,8 @@
     "league/flysystem": "^1.0",
     "league/flysystem-aws-s3-v3": "^1.0",
     "league/flysystem-cached-adapter": "^1.0",
-    "intervention/image": "^2.3"
+    "intervention/image": "^2.3",
+    "symfony/assetic-bundle": "^2.8"
   },
   "require-dev": {
     "sensio/generator-bundle": "^3.0",
