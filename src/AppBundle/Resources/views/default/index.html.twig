@@ -1,0 +1,49 @@
+{% extends '::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ include("FMElfinderBundle:Elfinder:helper/assets_css.html.twig") }}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    {{ include("FMElfinderBundle:Elfinder:helper/assets_js.html.twig") }}
+
+    <script type="text/javascript" charset="utf-8">
+        function getUrlParam(paramName) {
+            var reParam = new RegExp('(?:[\?&]|&amp;)' + paramName + '=([^&]+)', 'i');
+            var match = window.location.search.match(reParam);
+
+            return (match && match.length > 1) ? match[1] : '';
+        }
+        $().ready(function () {
+            var funcNum = getUrlParam('CKEditorFuncNum');
+            var mode = getUrlParam('mode');
+
+            var f = $('.elfinder').elfinder({
+                url: '{{ path('ef_connect', {'instance': instance, 'homeFolder': homeFolder }) }}' + '?mode=' + mode,
+                lang: '{{ locale }}',
+                onlyMimes: {{ onlyMimes|raw }},
+                getFileCallback: function (file) {
+                    if (funcNum) {
+                        {% if relative_path %}
+                        window.opener.CKEDITOR.tools.callFunction(funcNum, '{{ pathPrefix }}' + file.url.replace("{{ app.request.schemeAndHttpHost }}/", ""));
+                        {% else %}
+                        window.opener.CKEDITOR.tools.callFunction(funcNum, file.url);
+                        {% endif %}
+                        window.close();
+                    }
+                }
+            });
+
+            {% if fullscreen %}
+            $(window).resize(function () {
+                var h = $(window).height();
+                var $ef = $('.elfinder');
+                if ($ef.height() != h - 20) {
+                    $ef.height(h - 20).resize();
+                }
+            });
+            {% endif %}
+        });
+    </script>
+    <div class="elfinder"></div>
+{% endblock %}

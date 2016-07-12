@@ -9,6 +9,7 @@
     {% block stylesheets %}
         {% stylesheets
         '@AppBundle/Resources/public/css/bootstrap.min.css'
+        '@AppBundle/Resources/public/css/main.css'
         filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
         {% endstylesheets %}
@@ -17,11 +18,12 @@
 </head>
 <body>
 <div class="container">
-    {% block header %}{% endblock %}
+    <div class="page-header">
+        <h1>S3 Image Management System</h1>
+    </div>
     {% block body %}{% endblock %}
 </div>
 {% block javascripts %}
 {% endblock %}
 </body>
 </html>
-s

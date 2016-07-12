@@ -1,0 +1,20 @@
+.elfinder-cwd-view-icons .elfinder-cwd-file{
+    width: auto;
+    height: auto;
+}
+
+
+.elfinder-cwd-view-icons .elfinder-cwd-file-wrapper {
+    width: auto;
+    height: auto;
+}
+
+.elfinder-cwd-icon {
+    width: 200px;
+    height: 200px;
+}
+
+.elfinder-cwd-icon-directory {
+    width: 48px;
+    height: 48px;
+}
