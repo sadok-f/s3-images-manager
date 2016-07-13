@@ -80,4 +80,4 @@ fm_elfinder:
                                     version: latest
                         upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
                         upload_deny: ['all']
-                        disabled_commands: ['cut', 'mkfile', 'copy', 'rename']
+                        disabled_commands: ['cut', 'mkfile', 'copy']
