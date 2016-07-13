@@ -65,7 +65,7 @@ fm_elfinder:
                     uploads:
                         #show_hidden: true|false # defaults to false, hides dotfiles
                         driver: Flysystem
-                        url: "https://s3.amazonaws.com/sem-brands/"
+                        url: "https://s3.%aws_region%.amazonaws.com/%aws_bucket_name%/"
                         tmb_url: "/uploads/.tmb"
                         tmb_path: "uploads/.tmb"
                         tmb_size: 200
