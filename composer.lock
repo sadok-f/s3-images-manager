@@ -992,16 +992,16 @@
         },
         {
             "name": "studio-42/elfinder",
-            "version": "2.1.53",
+            "version": "2.1.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Studio-42/elFinder.git",
-                "reference": "bff6f1a3eb651f2b1e1b2f94a343aa9edc5d725a"
+                "reference": "06ada3132cefd057e1d89cb016f8c82473d420d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/bff6f1a3eb651f2b1e1b2f94a343aa9edc5d725a",
-                "reference": "bff6f1a3eb651f2b1e1b2f94a343aa9edc5d725a",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/06ada3132cefd057e1d89cb016f8c82473d420d4",
+                "reference": "06ada3132cefd057e1d89cb016f8c82473d420d4",
                 "shasum": ""
             },
             "require": {
@@ -1046,7 +1046,7 @@
             ],
             "description": "File manager for web",
             "homepage": "http://elfinder.org",
-            "time": "2020-01-25T14:09:50+00:00"
+            "time": "2021-06-13T15:04:24+00:00"
         },
         {
             "name": "symfony/asset",
@@ -2512,6 +2512,7 @@
                 "symfony",
                 "words"
             ],
+            "abandoned": "use `EnglishInflector` from the String component instead",
             "time": "2020-01-04T14:08:26+00:00"
         },
         {
