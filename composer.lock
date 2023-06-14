@@ -1080,16 +1080,16 @@
         },
         {
             "name": "studio-42/elfinder",
-            "version": "2.1.59",
+            "version": "2.1.62",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Studio-42/elFinder.git",
-                "reference": "06ada3132cefd057e1d89cb016f8c82473d420d4"
+                "reference": "91133c14a341158beca82aede0b2138236a96bc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/06ada3132cefd057e1d89cb016f8c82473d420d4",
-                "reference": "06ada3132cefd057e1d89cb016f8c82473d420d4",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/91133c14a341158beca82aede0b2138236a96bc8",
+                "reference": "91133c14a341158beca82aede0b2138236a96bc8",
                 "shasum": ""
             },
             "require": {
@@ -1134,7 +1134,13 @@
             ],
             "description": "File manager for web",
             "homepage": "http://elfinder.org",
-            "time": "2021-06-13T15:04:24+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/nao-pon",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-06-13T16:39:07+00:00"
         },
         {
             "name": "symfony/asset",
